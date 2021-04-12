@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<!-- Menampilkan chart / plot -->
+<div class='chart' id='plot'>
+    <script>
+        var graphs = {{plot | safe}};
+        Plotly.plot('plot',graphs,{})
+    </script>
+</div>
+
+<div class="my-5 row d-flex justify-content-around">
+    The proportion of our customer who already secured a vehicle insurance is slightly lower than the one who does not secured one. 
+    In relation to the target, there are almost no customer who already secure a vehicle insurance will accept our offer. 
+    Although the pattern is not clear enough, this variable might be the best predictor of our target compared to the others.
+</div>
+
+{% endblock %}

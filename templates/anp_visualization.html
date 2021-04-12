@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<!-- Menampilkan chart / plot -->
+<div class='chart' id='plot'>
+    <script>
+        var graphs = {{plot | safe}};
+        Plotly.plot('plot',graphs,{})
+    </script>
+</div>
+
+<div class="my-5 row d-flex justify-content-around">
+    The Annual_Premiun variable contains some outliers. In the preprocessing section, 
+    we can try to detect and remove the outliers and see how this approach would affect the model performance.
+    After removing the outlier with +- 1.5IQR rule, we can see that the strange data below Rs10000 are still there. 
+    It seems this data is not correlated that much to our target since the groupped median by Response are just slightly different
+</div>
+
+{% endblock %}

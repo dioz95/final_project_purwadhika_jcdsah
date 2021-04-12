@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<br>
+
+<div class="container-fluid">
+    <center>
+        <form method="POST" action = "http://127.0.0.1:5000/result">
+
+        <h5><span class="badge badge-secondary">Gender</span>
+            <input type="radio" id="male" name="ge" value="Male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="ge" value="Female" required>
+            <label for="female">Female</label></h5>
+        
+        <h5><span class="badge badge-secondary">Age</span>    
+            <input type="number" name="Age" step="1" min="20" max="85" placeholder="Input Age" required/></h5>
+        
+        <h5><span class="badge badge-secondary">Driving License</span>
+            <input type="radio" id="yes" name="dl" value="1" required>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="dl" value="0" required>
+            <label for="no">No</label></h5>
+
+        <h5><span class="badge badge-secondary">Previously Insured</span>
+            <input type="radio" id="yes" name="pi" value="1" required>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="pi" value="0" required>
+            <label for="no">No</label></h5>
+
+        <h5><span class="badge badge-secondary">Vehicle Age</span>
+            <input type="radio" id="< 1 Year" name="va" value="< 1 Year" required>
+            <label for="< 1 Year">less than 1 year</label><br>
+            <input type="radio" id="1-2 Year" name="va" value="1-2 Year" required>
+            <label for="1-2 Year">1 - 2 years</label><br>
+            <input type="radio" id="> 2 Year" name="va" value="> 2 Years" required>
+            <label for="> 2 Year">more than 2 years</label></h5>
+
+        <h5><span class="badge badge-secondary">Vehicle Damage</span>
+            <input type="radio" id="yes" name="vd" value="Yes" required>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="vd" value="No" required>
+            <label for="no">No</label></h5>
+        
+        <h5><span class="badge badge-secondary">Annual Premium</span>    
+            <input type="number" name="Annual Premium" step="0.01" min="2630" max="61892" placeholder="Input Annual Premium" required/></h5>
+
+        <h5><span class="badge badge-secondary">Vintage</span>    
+            <input type="number" name="Vintage" step="1" min="10" max="299" placeholder="Input Vintage" required/></h5>
+
+        <br><br>
+        <button style="height:45px;width:150px;font-size: 20px;text-align: center;line-height: 20px;background-color:#2a7886; color: cornsilk; type="button" class="btn btn-info">🔍 Predict</button>
+        </form>
+    </center>
+</div>
+
+{% endblock %}

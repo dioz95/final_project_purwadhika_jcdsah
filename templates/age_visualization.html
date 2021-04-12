@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <!-- Menu Dropdown -->
+ 
+    <!-- Chart / Plot -->
+    <div class="chart" id="plot">
+        <script>
+            var graphs = {{plot | safe}};
+            Plotly.plot('plot',graphs,{});
+        </script>
+    </div>
+
+    <div class="my-5 row d-flex justify-content-around">
+        Our customer age is ranging from 20's to 80's with the central value around 36 to 38. 
+        The potential customer have median age around 43 years old, while non-potential customer have lower median age (around 35 years old).
+    </div>
+    
+{% endblock content %}
