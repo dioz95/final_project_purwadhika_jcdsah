@@ -44,6 +44,10 @@ python app.py
 ```
 in your terminal, and open `localhost:5000` in your personal machine.
 
+Example of the SHAP plot: 
+
+<p align="center"><img src="https://github.com/dioz95/final_project_purwadhika_jcdsah/blob/main/shap.png" width=600/></p>
+
 ## Demo
 To see how the model works:
 1. Click the `Know Your Customer !!!` tab.
